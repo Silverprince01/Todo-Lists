@@ -151,7 +151,7 @@ section {
       }
     }
   }
-  .actcom{
+  .actcom {
     display: none;
   }
 }
@@ -163,11 +163,11 @@ section {
     width: 100% !important;
     right: 0%;
 
-    .actcomp{
+    .actcomp {
       display: none !important;
     }
   }
-  .actcom{
+  .actcom {
     display: flex !important;
     justify-content: space-evenly;
     padding: 10px;
@@ -176,7 +176,7 @@ section {
     margin-top: 20px;
     color: var(--text-checked);
     border-radius: 5px;
-    & :hover{
+    & :hover {
       color: hsl(220, 98%, 61%);
     }
   }

@@ -30,7 +30,7 @@ function todoItems(value){
     const todoText = document.createElement("p");
     const checkBox = document.createElement("input");
     const checkBoxLabel = document.createElement("label");
-    const cancel = document.createElement("span");
+    const cancel = document.createElement("img");
     let checkedInput = todoListItems.find((t) => t.value ===  value);
     todoText.textContent = value;
     checkBox.type = "checkbox";
@@ -54,7 +54,7 @@ function todoItems(value){
         }
     });
 
-    cancel.textContent = "X";
+    cancel.src = "images/icon-cross.svg";
     cancel.addEventListener('click', (e)=>{
         e.target.parentElement.remove();
     todoListItems = todoListItems.filter((t) => t !== checkedInput);
@@ -65,7 +65,7 @@ function todoItems(value){
     cancel.classList.add("cancel");
     todoContainer.appendChild(checkBox);
     todoContainer.appendChild(checkBoxLabel);
-    checkBoxLabel.appendChild(todoText);
+    todoContainer.appendChild(todoText);
     todoContainer.appendChild(cancel);
 
     container.appendChild(todoContainer);    
